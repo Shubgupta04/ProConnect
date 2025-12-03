@@ -1,0 +1,92 @@
+POST http://localhost:9090/register HTTP/1.1
+content-Type: application/json
+
+{
+    "username":"rahul",
+    "password":"rahul@2001",
+    "email":"rahul@gmail.com",
+    "name":"Rahul"
+}
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+   
+    "email":"shubham@gmail.com",
+    "password":"1234"
+    
+}
+
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+   
+    "email":"rahul@gmail.com",
+    "password":"1234"
+    
+}
+###
+
+
+GET http://localhost:9090/get_user_and_profile 
+Content-Type: application/json
+
+{
+     "token": "199ded276aea8457a052aa7fbdd19067a200b4617f69b182176d71b1d6a2b0d9"
+}
+
+###
+
+Post http://localhost:9090/update_profile_data 
+Content-Type: application/json
+
+{
+     "token": "38e42fe9078e97b29cdda22daee9100b695e2b18d7720b411d8cef262786f9cd",
+     
+     "currentPost":"Software Developer",
+     "pastWork":[
+        {"company":"IMax Global Venture ptv ltd",
+        "position":"Full Stack developer",
+        "years":"2+"
+        }
+     ],
+
+     "education":[
+        {"school":"IITM",
+        "degree":"BCA",
+        "fieldOfStudy":"2021-2024"}
+     ]
+}
+
+###
+
+ GET  http://localhost:9090/posts
+ Content-Type: application/json
+
+ {
+    "token":"3d50f05dbc50c7428b6e59088cfaf787c6bd6037ffada169aef300fc786ce4bb"
+ }
+###
+GET http://localhost:9090/user/get_all_users 
+Content-Type: application/json
+
+{
+     "token": "38ede8eb08e239a28b3fd53d860b33284fac42dd9807b717588a476f000d7922"
+}
+
+###
+
+GET  http://localhost:9090/user/user_connection_request 
+Content-Type: application/json
+
+{
+     "token": "018b91172d8cc663b147d47d721c16aaa78649b9df0c1e14f8d2e1fad42a4db1"
+}
+
