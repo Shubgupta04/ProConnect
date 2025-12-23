@@ -74,7 +74,11 @@ export default function Dashboard() {
               return(
                 <div key={post._id} className={styles.singleCard}>
                   <div className={styles.singleCard_profileContainer}>
-                    <img className={styles.userProfile} src={`${BASE_URL}/${authState.user.userId.profilePicture}`} alt="" />
+                    <img
+                      className={styles.userProfile}
+                      src={`${BASE_URL}/${post.userId.profilePicture}`}
+                      alt="user avatar"
+                    />
                     <div>
                           <div style={{display:"flex", gap: "1.2rem", justifyContent:"space-between"}}>
                               <p style={{fontWeight:"bold"}}>{post.userId.name}</p> 
